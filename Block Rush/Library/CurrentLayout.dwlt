@@ -468,7 +468,7 @@ MonoBehaviour:
       m_ClientGUIView: {fileID: 9}
     m_SearchString: 
   m_ExpandedScenes:
-  - 
+  - Main
   m_CurrenRootInstanceID: 0
   m_Locked: 0
   m_CurrentSortingName: TransformSorting
@@ -504,9 +504,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -2.733141, y: 1.4534909, z: -8.144627}
+    m_Target: {x: -4.5171227, y: 3.8084602, z: -7.546631}
     speed: 2
-    m_Value: {x: -2.733141, y: 1.4534909, z: -8.144627}
+    m_Value: {x: -4.5171227, y: 3.8084602, z: -7.546631}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -529,13 +529,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.010779256, y: 0.98656553, z: -0.07295061, w: -0.14577532}
+    m_Target: {x: 0.004331646, y: 0.97400904, z: 0.018693835, w: -0.22569488}
     speed: 2
-    m_Value: {x: -0.010779257, y: 0.9865656, z: -0.07295062, w: -0.14577533}
+    m_Value: {x: 0.004331646, y: 0.97400904, z: 0.018693835, w: -0.22569488}
   m_Size:
-    m_Target: 10
+    m_Target: 14.511267
     speed: 2
-    m_Value: 10
+    m_Value: 14.511267
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -680,19 +680,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets
+    - Assets/Scenes
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Mark\OneDrive\Documents\School\Projects\BlockRush\Block
     Rush
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 9c240000
-    m_LastClickedID: 9372
+    m_SelectedIDs: 08250000
+    m_LastClickedID: 9480
     m_ExpandedIDs: 000000009c24000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
