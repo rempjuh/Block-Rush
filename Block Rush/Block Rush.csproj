@@ -87,6 +87,7 @@
     <Compile Include="Assets\Asset Store Assets\SimpleTouchController\Scripts\InfoTouches.cs" />
     <Compile Include="Assets\Asset Store Assets\SimpleTouchController\Scripts\PlayerMoveController.cs" />
     <Compile Include="Assets\Asset Store Assets\SimpleTouchController\Scripts\SimpleTouchController.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerAttackScript.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
   </ItemGroup>
   <ItemGroup>
