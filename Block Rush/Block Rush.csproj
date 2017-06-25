@@ -87,8 +87,21 @@
     <Compile Include="Assets\Asset Store Assets\SimpleTouchController\Scripts\InfoTouches.cs" />
     <Compile Include="Assets\Asset Store Assets\SimpleTouchController\Scripts\PlayerMoveController.cs" />
     <Compile Include="Assets\Asset Store Assets\SimpleTouchController\Scripts\SimpleTouchController.cs" />
+    <Compile Include="Assets\Scripts\Algemeen\CameraFollow.cs" />
+    <Compile Include="Assets\Scripts\Algemeen\HealthScript.cs" />
+    <Compile Include="Assets\Scripts\BarricadeScript.cs" />
+    <Compile Include="Assets\Scripts\Enemy\EnemyMovement.cs" />
+    <Compile Include="Assets\Scripts\Interactible.cs" />
+    <Compile Include="Assets\Scripts\Player\BulletScript.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerAttackScript.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerScore.cs" />
+    <Compile Include="Assets\Scripts\Player\Weapons\Mac10.cs" />
+    <Compile Include="Assets\Scripts\Player\Weapons\Pistol.cs" />
+    <Compile Include="Assets\Scripts\Player\Weapons\ShotGun.cs" />
+    <Compile Include="Assets\Scripts\Player\Weapons\WeaponBase.cs" />
+    <Compile Include="Assets\Scripts\RandomBoxScript.cs" />
+    <Compile Include="Assets\Scripts\TestSpawner.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Asset Store Assets\SimpleTouchController\README.txt" />

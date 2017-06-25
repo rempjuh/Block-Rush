@@ -6,7 +6,7 @@ public class PlayerAttackScript : MonoBehaviour {
 	[SerializeField]
 	private SimpleTouchController _rightJoyStick;
 	private WeaponType _holdedWeaponOne;
-	private WeaponType _holdedWeaponTwo;
+	//private WeaponType _holdedWeaponTwo;
 	private WeaponInfo _selectedWeapon;
 	[SerializeField]
 	private GameObject _bullet;
@@ -16,11 +16,12 @@ public class PlayerAttackScript : MonoBehaviour {
 	private bool _isShooting;
 	// Use this for initialization
 	void Start () {
-		_weapon.Add(WeaponType.Pistol, new WeaponInfo("Pistol", 1, 1,_weapons[0]));
-		_weapon.Add(WeaponType.Mac, new WeaponInfo("Mac-10", 0.1f, 1, _weapons[1]));
-		_weapon.Add(WeaponType.ShotGun, new WeaponInfo("Shotgun", 1, 5, _weapons[2]));
+		_weapon.Add(WeaponType.Pistol, new WeaponInfo("Pistol", 1, 10,_weapons[0],new Pistol()));
+		_weapon.Add(WeaponType.Mac, new WeaponInfo("Mac-10", 0.1f, 10, _weapons[1], new Mac10()));
+		_weapon.Add(WeaponType.ShotGun, new WeaponInfo("Shotgun", 1, 30, _weapons[2], new ShotGun()));
+
 		_holdedWeaponOne = WeaponType.Pistol;
-		_holdedWeaponTwo = WeaponType.Mac;
+	//	_holdedWeaponTwo = WeaponType.Mac;
 		_selectedWeapon = _weapon[_holdedWeaponOne];
 		SetWeapon(_holdedWeaponOne);
 	}
@@ -42,12 +43,7 @@ public class PlayerAttackScript : MonoBehaviour {
 	IEnumerator ShootGun()
 	{
 		_isShooting = true;
-		Rigidbody rigi = Instantiate(_bullet,
-			transform.Find(_selectedWeapon.Name).Find("ShootPoint").position,
-			Quaternion.Euler(transform.forward)).GetComponent<Rigidbody>();
-
-		rigi.AddRelativeForce(transform.forward*1000);
-		Destroy(rigi.gameObject, 3);
+		_selectedWeapon.Base.Shoot(_bullet, transform.Find(_selectedWeapon.Name).Find("ShootPoint").position, _selectedWeapon.Damage,transform);
 		yield return new WaitForSeconds(_selectedWeapon.ShootTime);
 		_isShooting = false;
 	}
@@ -73,14 +69,16 @@ public class WeaponInfo
 {
 	public string Name;
 	public float ShootTime;
-	public float Damage;
+	public int Damage;
 	public GameObject GunObject;
-	public WeaponInfo(string name, float shootTime,float damage, GameObject gunObject)
+	public WeaponBase Base;
+	public WeaponInfo(string name, float shootTime,int damage, GameObject gunObject, WeaponBase Wbase)
 	{
 		Name = name;
 		ShootTime = shootTime;
 		Damage = damage;
 		GunObject = gunObject;
+		Base = Wbase;
 	}
 }
 public enum WeaponType
@@ -88,5 +86,6 @@ public enum WeaponType
 	Pistol,
 	Mac,
 	ShotGun,
+	Flamethrower,
 	None
 }

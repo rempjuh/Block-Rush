@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour {
 	[SerializeField]
 	private SimpleTouchController _rightJoyStick;
 	private Rigidbody _rigidBody;
-	private const float _movementSpeed = 5;
+	private const float _movementSpeed = 20;
 	// Use this for initialization
 	void Start () {
 		_rigidBody = GetComponent<Rigidbody>();
